@@ -1,12 +1,117 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
-  </head>
-  <body>
+    <title>HTML Academy: Мишка-Главная</title>
+</head>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+<body>
+    <header class="page-header">
+        <div class="page-header__logo">
+            <img src="http://placehold.it/86x35" alt="Логотип Мишка">
+        </div>
+        <nav class="main-nav main-nav--closed">
+            <button class="main-nav__toggle" type="button">Показать меню</button>
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a href="#">Каталог товаров</a></li>
+                    <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
+                    <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
+                    <li class="main-nav__item"><a href="#">Корзина:Пока пуста</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
 
-  </body>
+        <section class="hand-made-menu">
+            <h1 class="hand-made-menu__title">Милые штуки ручной работы для дома</h1>
+            <a href="#" class="hand-made-menu__menu-link hand-made-menu__menu-link--active">Предметы интерьера</a>
+            <a href="#" class="hand-made-menu__menu-link">Детские игрушки</a>
+        </section>
+
+        <article class="week-product">
+            <header class="week-product__header">
+                <h2 class="week-product__title">Вязаные корзинки</h2>
+                <p class="week-product__feature">Товар недели</p>
+            </header>
+            <p class="week-product__description">
+                Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+            </p>
+            <table class="features-table week-product__table">
+                <tr class="features-table__row features-table__row--first-row">
+                    <td class="features-table__data">Цвет:</td>
+                    <td class="features-table__data">«Тиффани»/серый</td>
+                </tr>
+                <tr class="features-table__row">
+                    <td class="features-table__data">Диаметр:</td>
+                    <td class="features-table__data">25 см</td>
+                </tr>
+                <tr class="features-table__row">
+                    <td class="features-table__data">Высота:</td>
+                    <td class="features-table__data">15 см</td>
+                </tr>
+            </table>
+            <img class="week-product__image" src="http://placehold.it/260x315" alt="Корзинки!!! Товар недели" />
+            <p class="week-product__price">Цена: 990 руб.</p>
+            <a href="#" class="btn">Заказать</a>
+        </article>
+        <section class="about-us">
+            <h2 class="about-us__title">Коротко о нас:</h2>
+            <ul class="about-us__features-list">
+                <li class="about-us__feature-item">Экологически чистые материалы</li>
+                <li class="about-us__feature-item">Скандинавский стиль по российской цене</li>
+                <li class="about-us__feature-item">Увеличивает лайки на фотографиях</li>
+                <li class="about-us__feature-item">Связано вручную с любовью и умилением</li>
+                <li class="about-us__feature-item">Поддержка отечественного производителя</li>
+                <li class="about-us__feature-item">Поставляется в подарочной упаковке</li>
+            </ul>
+        </section>
+        <section class="client-review">
+            <h2 class="client-review__title">Отзывы</h2>
+            <blockquote class="client-review__text">
+                Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!
+            </blockquote>
+            <cite class="client-review__name">Анастасия Красильникова</cite>
+            <p class="client-review__user-link">@misssssiskras</p>
+            <button class="client-review__prev" type="button">Предыдущий отзыв</button>
+            <button class="client-review__next" type="button">Следующий отзыв</button>
+            <a href="#" class="btn">Написать</a>
+        </section>
+        <section class="contacts">
+            <h2 class="contacts__title">Контакты</h2>
+            <p class="contacts__part"><span class="contacts__part-title">e-mail:</span>info@mimimishkashop.ru</p>
+            <p class="contacts__part"><span class="contacts__part-title">адрес:</span>г. Санкт-Петербург,ул. Большая Конюшенная,д. 19/8, офис 101</p>
+            <div class="contacts__map contacts__wrapper">
+                <img src="http://placehold.it/768x457" alt="Карта">
+            </div>
+            <a href="#" class="btn">Напишите нам</a>
+        </section>
+
+    </main>
+    <footer class="page-footer">
+        <section class="social">
+            <a href="https://www.instagram.com/" class="social__link social__link--inst">instagram</a>
+            <a href="https://www.facebook.com/" class="social__link social__link--face">facebook</a>
+            <a href="https://twitter.com/" class="social__link social__link--twit">twitter</a>
+        </section>
+        <a href="https://htmlacademy.ru" class="page-footer__developers">Разработано</a>
+    </footer>
+
+    <section class="add-to-cart">
+        <div class="add-to-cart__wrapper">
+            <h3 class="add-to-cart__cart-title">Добавить в корзину</h3>
+            <p class="add-to-cart__info">Выберите размер:</p>
+            <div class="add-to-cart__size-toggle">
+                <button class="add-to-cart__size-switch add-to-cart__size-switch--active">S</button>
+                <button class="add-to-cart__size-switch">M</button>
+                <button class="add-to-cart__size-switch">L</button>
+            </div>
+            <a href="#" class="btn">Добавить</a>
+        </div>
+    </section>
+
+</body>
+
 </html>

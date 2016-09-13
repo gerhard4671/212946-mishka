@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка-Каталог</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="page-header__logo">
+            <img src="http://placehold.it/86x35" alt="Логотип Мишка">
+        </div>
+        <nav class="main-nav main-nav--closed">
+            <button class="main-nav__toggle" type="button">Показать меню</button>
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a href="#">Каталог товаров</a></li>
+                    <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
+                    <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
+                    <li class="main-nav__item"><a href="#">Корзина:Пока пуста</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="main-content">
+        <h1 class="main-content__page-title">Каталог товаров</h1>
+        <section class="products">
+            <article class="product-item">
+                <img class="product-item__image" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик">
+                <h2 class="product-item__title">Зайчик-попрыгайчик</h2>
+                <p class="product-item__features">Рост 30 см, вес 200 г</p>
+                <div class="product-item__buy-section">
+                    <p class="product-item__price">1 200 руб.</p>
+                    <a href="#" class="cart-btn product-item__add-to-cart">Купить</a>
+                </div>
+            </article>
+            <article class="product-item">
+                <img class="product-item__image" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик">
+                <h2 class="product-item__title">Корзинка для белья</h2>
+                <p class="product-item__features">Диаметр 15 см, высота 10 см</p>
+                <div class="product-item__buy-section">
+                    <p class="product-item__price">690 руб.</p>
+                    <a href="#" class="cart-btn product-item__add-to-cart">Купить</a>
+                </div>
+            </article>
+            <article class="product-item">
+                <img class="product-item__image" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик">
+                <h2 class="product-item__title">Большая корзинка для игрушек</h2>
+                <p class="product-item__features">Диаметр 30 см, высота 30 см</p>
+                <div class="product-item__buy-section">
+                    <p class="product-item__price">1 500 руб.</p>
+                    <a href="#" class="cart-btn product-item__add-to-cart">Купить</a>
+                </div>
+            </article>
+        </section>
+        <section class="production-process">
+            <h2 class="production-process__title">Процесс производства</h2>
+<!-- Тут как понимаю должно быть как-то иначе
+====================================================================================================-->
+            <img class="production-process__video"src="src=http://placehold.it/260x150" alt="Видео">
+            <p class="production-process__promo">
+                По просьбам наших любимых фолловеров мы сняли для вас подробное
+                видео о том, как появляются наши товары.
+            </p>
+            <a href="#" class="btn">Заказать</a>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <section class="social">
+            <a href="https://www.instagram.com/" class="social__link social__link--inst">instagram</a>
+            <a href="https://www.facebook.com/" class="social__link social__link--face">facebook</a>
+            <a href="https://twitter.com/" class="social__link social__link--twit">twitter</a>
+        </section>
+        <a href="https://htmlacademy.ru" class="page-footer__developers">Разработано</a>
+    </footer>
+
+    <section class="add-to-cart">
+        <div class="add-to-cart__wrapper">
+            <h3 class="add-to-cart__cart-title">Добавить в корзину</h3>
+            <p class="add-to-cart__info">Выберите размер:</p>
+            <div class="add-to-cart__size-toggle">
+                <button class="add-to-cart__size-switch add-to-cart__size-switch--active">S</button>
+                <button class="add-to-cart__size-switch">M</button>
+                <button class="add-to-cart__size-switch">L</button>
+            </div>
+            <a href="#" class="btn add-to-cart__btn">Добавить</a>
+        </div>
+    </section>
+
+</body>
+
+</html>
