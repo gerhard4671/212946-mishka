@@ -1,0 +1,26 @@
+.week-product {
+    color: $gray-text;
+    padding: $padding-mobile;
+}
+.week-product__title {
+    @include font-set(25px, 30px, $font-bold, $black);
+
+}
+
+.week-product__feature {
+    @include font-set(17px, 17px, $font-bold, $breeze);
+    text-transform: uppercase;
+
+}
+
+.week-product__price {
+    @include font-set(17px, 24px, $font-bold, $gray-text);
+    text-align: center;
+}
+
+
+
+.week-product__image-block {
+    text-align: center;
+
+}

@@ -1,0 +1,10 @@
+.production-process {
+    padding: $padding-mobile;
+}
+.production-process__title {
+    @include font-set(17px, 24px, $font-bold, $black);
+}
+
+.production-process__promo {
+    @include font-set(13px, 24px, $font-reg, $gray-text);
+}

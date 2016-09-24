@@ -1,0 +1,20 @@
+.client-review {
+    padding: $padding-mobile;
+}
+
+.client-review__title {
+    @include font-set(25px, 30px,  $font-bold, $black);
+}
+
+.client-review__text {
+    color: $gray-text;
+    margin: 0;
+}
+
+.client-review__name {
+    @include font-set(18px, 24px,  $font-bold, $black);
+}
+
+.client-review__user-link {
+    @include font-set(18px, 30px,  $font-reg, $gray-text);
+}

@@ -1,0 +1,29 @@
+.about-us {
+    padding: $padding-mobile;
+}
+
+.about-us__features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-us__title {
+    @include font-set(25px, 30px, $font-bold, $black);
+    margin-bottom: 54px;
+}
+
+.about-us__feature-item {
+    position: relative;
+    margin-bottom: 54px;
+    @include font-set(17px, 17px, $font-bold, $black);
+}
+
+.about-us__feature-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 50px;
+    top: -47px;
+}

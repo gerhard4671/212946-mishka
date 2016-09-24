@@ -1,0 +1,26 @@
+.social {
+    display: flex;
+    justify-content: center;
+
+}
+
+.social__link {
+    font-size: 0;
+    align-items: center;
+    width: 25px;
+    height: 29px;
+    margin-right: 40px;
+}
+
+.social__link--inst {
+    background: url("../img/icon-insta.svg") no-repeat 0 100%;
+}
+
+.social__link--face {
+    background: url("../img/icon-fb.svg") no-repeat 0 100%;
+}
+
+.social__link--twit {
+    background: url("../img/icon-twitter.svg") no-repeat 0 100%;
+    margin-right: 0;
+}
