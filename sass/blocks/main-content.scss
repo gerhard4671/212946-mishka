@@ -1,0 +1,5 @@
+.main-content__page-title {
+    background-color: $bg-grey;
+    @include font-set(27px, 30px, $font-bold, $black);
+    padding: $padding-mobile;
+}

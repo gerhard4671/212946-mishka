@@ -1,0 +1,15 @@
+.product-item {
+    padding: $padding-mobile;
+}
+
+.product-item__title {
+    @include font-set(17px, 24px, $font-bold, $black);
+}
+
+.product-item__features {
+    @include font-set(13px, 30px, $font-reg, $gray-text);
+}
+
+.product-item__price {
+    @include font-set(15px, 24px, $font-bold, $black);
+}

@@ -1,0 +1,13 @@
+body {
+    @include font-set(15px, 30px, $font-reg, $black);
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+input::-webkit-input-placeholder,
+input:-moz-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder {
+    opacity: 0.3;
+}

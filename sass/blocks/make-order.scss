@@ -1,0 +1,50 @@
+.make-order {
+    padding: $padding-mobile;
+}
+
+.make-order__request {
+    @include font-set(13px, 24px, $font-reg, $gray-text);
+}
+
+.make-order__form-caption {
+    @include font-set(17px, 17px, $font-bold, $breeze);
+    text-transform: uppercase;
+}
+
+.make-order__radio-label {
+    @include font-set(17px, 18px, $font-bold, $black);
+}
+
+.make-order__check-label {
+    @include font-set(17px, 18px, $font-bold, $black);
+}
+
+.make-order__name-label {
+    @include font-set(17px, 18px, $font-bold, $black);
+}
+
+.make-order__name-label {
+    @include font-set(17px, 18px, $font-bold, $black);
+}
+
+.make-order__name {
+    @include font-set(17px, 18px, $font-reg, $gray-text);
+}
+
+.make-order__tel {
+    @include font-set(17px, 18px, $font-reg, $gray-text);
+}
+
+.make-order__email {
+    @include font-set(17px, 18px, $font-reg, $gray-text);
+}
+
+.make-order__add {
+    @include font-set(17px, 18px, $font-reg, $gray-text);
+}
+
+.make-order__required {
+    @include font-set(14px, 5.24px, $font-reg, $gray-text);
+    padding: 0;
+    text-align: center;
+}

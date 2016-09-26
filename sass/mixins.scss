@@ -1,0 +1,33 @@
+@for $i from 1 through 6 {
+    .about-us__feature-item#{$i}::before {
+        background: url("../img/icon-feature-#{$i}.svg") no-repeat;
+    }
+}
+
+@mixin font-set($font-size, $line-height, $font-fam, $color) {
+    line-height: $line-height;
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-fam, Arial, sans-serif;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// @mixin container() {
+//   width: 320px;
+//   margin: 0 auto;
+//
+//   @media $tablet-widths {
+//     width: 670px;
+//   }
+//
+//   @media $desktop-widths {
+//     width: 960px;
+//   }
+// }
