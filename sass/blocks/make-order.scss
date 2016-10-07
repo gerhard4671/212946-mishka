@@ -1,50 +1,326 @@
 .make-order {
     padding: $padding-mobile;
-}
+    &__request {
+        @include font-set(13px, 24px, $font-reg, $gray-text);
+    }
+    &__form-caption {
+        @include font-set(17px, 17px, $font-bold, $breeze);
+        text-transform: uppercase;
+        width: auto;
+        box-sizing: border-box;
+        @include  clearfix();
+        width: 100%;
+        &::after {
+            content: "";
+            box-sizing: border-box;
+            float: right;
+            padding-top: 9px;
+            height: 1px;
+            min-width: 180px;
+            margin-top: 9px;
+            border-top: 1px solid $breeze;
+        }
+    }
 
-.make-order__request {
-    @include font-set(13px, 24px, $font-reg, $gray-text);
-}
+    &__radio-label {
+        @include font-set(17px, 18px, $font-bold, $black);
+        &::before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 40px;
+            height: 40px;;
+            cursor: pointer;
+            margin-right: 25px;
+            background: url("../img/spritesheet.png") no-repeat -10px -1052px;
+        }
+    }
 
-.make-order__form-caption {
-    @include font-set(17px, 17px, $font-bold, $breeze);
-    text-transform: uppercase;
-}
+    &__radio {
+        display: none;
+    }
+    &__radio:checked + &__radio-label::before {
+        background: url("../img/spritesheet.png") no-repeat -10px -992px;
+    }
 
-.make-order__radio-label {
-    @include font-set(17px, 18px, $font-bold, $black);
-}
+    &__check-label {
+        @include font-set(17px, 18px, $font-bold, $black);
+        &::before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            margin-right: 25px;
+            background: url("../img/spritesheet.png") no-repeat -10px -500px;
+        }
+    }
 
-.make-order__check-label {
-    @include font-set(17px, 18px, $font-bold, $black);
-}
+    &__check {
+        display: none
+    }
 
-.make-order__name-label {
-    @include font-set(17px, 18px, $font-bold, $black);
-}
+    &__check:checked + &__check-label::before {
+        background: url("../img/spritesheet.png") no-repeat -10px -441px;
+    }
+    &__form-container {
+        margin-bottom: 20px;
+        &--last {
+            margin-bottom: 0;
+        }
+    }
 
-.make-order__name-label {
-    @include font-set(17px, 18px, $font-bold, $black);
-}
+    &__name-label {
+        @include font-set(17px, 18px, $font-bold, $black);
+    }
+    &__name {
+        @include font-set(17px, 18px, $font-reg, $gray-text);
+        border: none;
+        width: 100%;
+        padding-bottom: 14px;
+        border-bottom: 2px solid $black;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__tel {
+        box-sizing: border-box;
+        @include font-set(17px, 25px, $font-reg, $gray-text);
+        border: none;
+        width: 100%;
+        padding-bottom: 14px;
+        padding-right: 30px;
+        background: url("../img/icon-phone.svg") no-repeat 100% 0%;
+        border-bottom: 2px solid $black;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__email {
+        box-sizing: border-box;
+        @include font-set(17px, 25px, $font-reg, $gray-text);
+        border: none;
+        width: 100%;
+        padding-bottom: 14px;
+        padding-right: 30px;
+        background: url("../img/icon-mail.svg") no-repeat 100% 0%;
+        border-bottom: 2px solid $black;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__add {
+        box-sizing: border-box;
+        height: 138px;
+        @include font-set(17px, 18px, $font-reg, $gray-text);
+        width: 100%;
+        padding: 14px;
+        border: 2px solid $black;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__required {
+        @include font-set(13px, 14px, $font-reg, $gray-text);
+        padding: 0;
+        text-align: center;
+    }
+    &__send-order {
+        margin-bottom: 55px;
+    }
+    &__form-part {
+        padding: 25px 0;
+        border: none;
+    }
 
-.make-order__name {
-    @include font-set(17px, 18px, $font-reg, $gray-text);
-}
+    @media #{$tablet} {
+        padding: 0;
+        margin-left: 0;
 
-.make-order__tel {
-    @include font-set(17px, 18px, $font-reg, $gray-text);
-}
+        &__form-caption {
+            padding: 0 50px;
+            float: left;
+            &::after {
+                display: none;
+            }
+        }
+        &__request {
+            @include font-set(17px, 30px, $font-reg, $gray-text);
+            padding: 0 50px;
+        }
 
-.make-order__email {
-    @include font-set(17px, 18px, $font-reg, $gray-text);
-}
+        &__block {
+            margin-left: 180px;
+            padding-right: 50px;
+            margin-top: -10px;
+        }
 
-.make-order__add {
-    @include font-set(17px, 18px, $font-reg, $gray-text);
-}
+        &__form-part {
+            padding: 40px 0;
+            &--grey {
+                background-color: $bg-grey;
+                padding: 80px 0px 60px 0px;
+            }
+        }
 
-.make-order__required {
-    @include font-set(14px, 5.24px, $font-reg, $gray-text);
-    padding: 0;
-    text-align: center;
+        &__form-container--color {
+            width: 200px;
+            display: inline-block;
+        }
+
+        &__form-container--fio {
+            display: flex;
+        }
+
+        &__check-label {
+            @include font-set(19px, 18px, $font-bold, $black);
+        }
+
+        &__radio-label {
+            @include font-set(19px, 18px, $font-bold, $black);
+        }
+
+        &__name-label {
+            display: inline-block;
+            @include font-set(19px, 18px, $font-bold, $black);
+        }
+        &__name {
+            display: inline-block;
+            margin-left: 25px;
+        }
+
+        &__form-part {
+            &--tel {
+                background-color: $bg-grey;
+                padding: 70px 0 40px 0;
+
+                }
+
+            &--email {
+                background-color: $bg-grey;
+                padding: 0;
+                padding-bottom: 70px;
+            }
+        }
+        &__tel {
+            background-position: 96% 0;
+        }
+
+        &__email {
+            box-sizing: border-box;
+            background-position: 96% 0;
+            padding-right: 50px;
+        }
+
+        &__send-order {
+            max-width: 230px;
+            padding-left: 50px;
+        }
+
+        &__required {
+            float: right;
+            padding-right: 50px;
+            @include font-set(17px, 30px, $font-reg, $gray-text);
+        }
+    }
+
+    @media #{$desktop} {
+        padding: 0;
+        margin-left: 0;
+
+        &__form-caption {
+            padding: 0 50px;
+            margin-left: 65px;
+            float: left;
+            &::after {
+                display: none;
+            }
+        }
+        &__request {
+            @include font-set(17px, 30px, $font-reg, $gray-text);
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        &__block {
+            margin-left: 224px;
+            max-width: 700px;
+            padding-right: 50px;
+            &--colors {
+                max-width: 740px;
+            }
+        }
+
+        &__form-part {
+            padding: 40px 0;
+            &--grey {
+                background-color: $bg-grey;
+                padding: 80px 0px 60px 0px;
+            }
+        }
+
+        &__form-container--color {
+            width: 200px;
+            display: inline-block;
+        }
+
+
+
+        &__check-label {
+            @include font-set(19px, 18px, $font-bold, $black);
+        }
+
+        &__radio-label {
+            @include font-set(19px, 18px, $font-bold, $black);
+        }
+
+        &__name-label {
+            display: inline-block;
+            @include font-set(19px, 18px, $font-bold, $black);
+        }
+        &__name {
+            width: 570px;
+            margin-left: 25px;
+            &--first {
+                width: 622px;
+            }
+        }
+
+        &__form-part {
+            &--tel {
+                background-color: $bg-grey;
+                padding: 70px 0 40px 0;
+
+                }
+
+            &--email {
+                background-color: $bg-grey;
+                padding: 0;
+                padding-bottom: 70px;
+            }
+        }
+        &__tel {
+            background-position: 100% 0;
+        }
+
+        &__email {
+            box-sizing: border-box;
+            background-position: 100% 0;
+            padding-right: 50px;
+        }
+
+        &__send-order {
+            max-width: 230px;
+            margin-left: 224px;
+        }
+
+        &__required {
+            float: right;
+            margin-right: 224px;
+
+            @include font-set(17px, 30px, $font-reg, $gray-text);
+        }
+    }
 }

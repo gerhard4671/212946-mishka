@@ -1,26 +1,140 @@
 .week-product {
     color: $gray-text;
     padding: $padding-mobile;
-}
-.week-product__title {
-    @include font-set(25px, 30px, $font-bold, $black);
+    &__title {
+            @include font-set(25px, 30px, $font-bold, $black);
+            margin: 0;
+            margin-top: 35px;
+    }
+    &__feature {
+        @include font-set(17px, 17px, $font-bold, $breeze);
+        text-transform: uppercase;
+        margin: 0;
+        margin-top: 12px;
+    }
+    &__price {
+        @include font-set(17px, 24px, $font-bold, $gray-text);
+        text-align: center;
+    }
+    &__table{
+        margin: 28px auto;
+    }
+    &__image-block {
+            text-align: center;
+    }
+    &__description {
+        @include font-set(15px, 24px, $font-reg, $gray-text);
+        margin: 0;
+        margin-top: 20px;
+    }
 
-}
-
-.week-product__feature {
-    @include font-set(17px, 17px, $font-bold, $breeze);
-    text-transform: uppercase;
-
-}
-
-.week-product__price {
-    @include font-set(17px, 24px, $font-bold, $gray-text);
-    text-align: center;
-}
-
-
-
-.week-product__image-block {
-    text-align: center;
+    @media #{$tablet} {
+        padding: 0 50px;
+        margin-top: 55px;
+        margin-bottom: 100px;
+        @include clearfix();
+        &__header {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        &__title {
+            @include font-set(43px, 50px, $font-bold, $black);
+            margin: 0;
+        }
+        &__feature {
+            margin: 0;
+            max-width: 75px;
+            text-align: center;
+        }
+        &__image {
+            display: none;
+        }
+        &__image-block {
+            background: url("../img/triple-set-tablet@1x.jpg") no-repeat;
+            width: 50%;
+            height: 404px;
+            float: right;
+            margin-top: -87px;
+            margin-left: 44px;
+        }
+        &__description {
+            width: 290px;
+            @include font-set(17px, 30px, $font-reg, $gray-text);
+        }
+        &__table{
+            width: 290px;
+            margin: 54px 0;
+            float: left;
+        }
+        &__make-order {
+            max-width: 290px;
+        }
+        &__price {
+            @include font-set(20px, 24px, $font-bold, $gray-text);
+            width: 290px;
+        }
+    }
+    @media #{$desktop} {
+        padding: 0 50px;
+        @include clearfix();
+        margin-bottom: 150px;
+        &__header {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: flex-start;
+            margin-bottom: 40px;
+        }
+        &__title {
+            @include font-set(53px, 57px, $font-bold, $black);
+            margin: 0;
+            order: 2;
+        }
+        &__feature {
+            margin: 0;
+            max-width: 75px;
+            text-align: center;
+            order: 1;
+            margin-right: 55px;
+            margin-left: 45px;
+        }
+        &__image {
+            display: none;
+        }
+        &__image-block {
+            background: url("../img/triple-set-desktop@1x.jpg") no-repeat;
+            width: 50%;
+            height: 636px;
+            float: right;
+            margin-top: -278px;
+            margin-left: 44px;
+        }
+        &__description {
+            margin-left: 175px;
+            width: 293px;
+            @include font-set(17px, 30px, $font-reg, $gray-text);
+            margin-bottom: 25px;
+            margin-top: 53px;
+        }
+        &__table{
+            width: 293px;
+            margin-left: 175px;
+            float: left;
+            margin-bottom: 110px;
+        }
+        &__make-order {
+            max-width: 293px;
+            margin-left: 175px;
+        }
+        &__price {
+            @include font-set(20px, 24px, $font-bold, $gray-text);
+            width: 290px;
+            margin-left: 175px;
+            margin-bottom: 33px;
+        }
+    }
 
 }

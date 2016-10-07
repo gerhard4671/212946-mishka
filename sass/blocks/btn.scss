@@ -1,0 +1,15 @@
+.btn {
+    text-decoration: none;
+    @include font-set(18px, 48px, $font-bold, $gray-text);
+    text-transform: uppercase;
+    background-color: $white;
+    width: auto;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid $gray-text;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+}

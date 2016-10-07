@@ -6,14 +6,13 @@
     <title>HTML Academy: Мишка-Главная</title>
     <link rel="stylesheet" href="css/style.css" >
 </head>
-
 <body>
     <header class="page-header">
             <div class="page-header__logo">
                 <img src="img/logo-mobile.svg"  alt="Логотип Мишка">
             </div>
+            <button class="page-header__nav-toggle" type="button">Показать меню</button>
             <nav class="main-nav main-nav--closed">
-                <button class="main-nav__toggle" type="button">Показать меню</button>
                 <div class="main-nav__wrapper">
                     <ul class="main-nav__list">
                         <li class="main-nav__item"><a href="#">Каталог товаров</a></li>
@@ -28,8 +27,15 @@
 
         <section class="hand-made-menu">
             <h1 class="hand-made-menu__title">Милые штуки ручной работы для дома</h1>
-            <a href="#" class="hand-made-menu__menu-link hand-made-menu__menu-link--active">Предметы интерьера</a>
-            <a href="#" class="hand-made-menu__menu-link">Детские игрушки</a>
+            <div class="hand-made-menu__menu-container">
+                <div class="hand-made-menu__block hand-made-menu__block--active">
+                    <a href="#" class="hand-made-menu__menu-link hand-made-menu__menu-link--active">Предметы интерьера</a>
+                </div>
+                <div class="hand-made-menu__block">
+                    <a href="#" class="hand-made-menu__menu-link">Детские игрушки</a>
+                </div>
+
+            </div>
 
         </section>
 
@@ -59,7 +65,10 @@
                 <img class="week-product__image" src="img/triple-set-mobile@1x.jpg" alt="Корзинки!!! Товар недели" />
             </div>
             <p class="week-product__price">Цена: 990 руб.</p>
-            <a href="#" class="btn">Заказать</a>
+            <div class="week-product__make-order">
+                <a href="#" class="btn">Заказать</a>
+            </div>
+
         </article>
         <section class="about-us">
             <h2 class="about-us__title">Коротко о нас:</h2>
@@ -77,25 +86,37 @@
             <blockquote class="client-review__text">
                 Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!
             </blockquote>
-            <cite class="client-review__name">Анастасия Красильникова</cite>
-            <p class="client-review__user-link">@misssssiskras</p>
-            <button class="client-review__prev" type="button">Предыдущий отзыв</button>
-            <button class="client-review__next" type="button">Следующий отзыв</button>
-            <a href="#" class="btn">Написать</a>
+            <div class="client-review__container">
+                <cite class="client-review__name">Анастасия Красильникова</cite>
+                <p class="client-review__user-link">@misssssiskras</p>
+            </div>
+            <div class="client-review__btn-container">
+                <button class="client-review__btn client-review__btn--prev" type="button">Предыдущий отзыв</button>
+                <button class="client-review__btn client-review__btn--next" type="button">Следующий отзыв</button>
+            </div>
+            <div class="client-review__wright-to-us">
+                <a href="#" class="btn">Написать</a>
+            </div>
         </section>
         <section class="contacts">
-            <h2 class="contacts__title">Контакты</h2>
-            <p class="contacts__part"><span class="contacts__part-title">e-mail:</span>info@mimimishkashop.ru</p>
-            <p class="contacts__part"><span class="contacts__part-title">адрес:</span>г. Санкт-Петербург,ул. Большая Конюшенная,д. 19/8, офис 101</p>
-            <div class="contacts__map__wrapper">
-                <img class="contacts__map"src="img/map-mobile@1x.jpg" alt="Карта">
+                <h2 class="contacts__title">Контакты</h2>
+                <div class="contacts__text-container">
+                    <p class="contacts__part  contacts__part--nowrap">e-mail:<span class="contacts__text-part contacts__text-part--email">info@mimimishkashop.ru</span></p>
+                    <p class="contacts__part">адрес:<span class="contacts__text-part">г. Санкт-Петербург,ул. Большая Конюшенная,д. 19/8, офис 101</span></p>
+                </div>
+
+            <div class="contacts__map-wrapper">
+                <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.7330251915287!2d30.3212862!3d59.9365721!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f8f62bb3f%3A0xdbd8ceddae86ceba!2sBolshaya+Konyushennaya+ul.%2C+29%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2sua!4v1475003342708"  frameborder="0" style="border:0" allowfullscreen></iframe>                <!-- <img class="contacts__map"src="img/map-mobile@1x.jpg" alt="Карта"> -->
             </div>
-            <a href="#" class="btn">Напишите нам</a>
+            <div class="contacts__wright-to-us">
+                <a href="#" class="btn">Напишите нам</a>
+            </div>
         </section>
 
     </main>
     <footer class="page-footer">
         <div class="page-footer__wrapper">
+            <img src="img/logo-mobile.svg" alt="Логотип Мишка" class="page-footer__logo">
             <section class="social">
                 <a href="https://www.instagram.com/" class="social__link social__link--inst">instagram</a>
                 <a href="https://www.facebook.com/" class="social__link social__link--face">facebook</a>

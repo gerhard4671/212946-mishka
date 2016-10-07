@@ -1,19 +1,113 @@
-.contacts__title {
-    @include font-set(18px, 30px, $font-bold, $black);
-    padding: $padding-mobile;
-}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 38px;
+    &__title {
+        @include font-set(18px, 30px, $font-bold, $black);
+        padding: $padding-mobile;
+        margin-bottom: 25px;
+    }
+    &__part {
+        color: $gray-text;
+        padding: $padding-mobile;
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    &__text-part {
+        margin-left: 30px;
+        border: none;
+        &--email {
+            border-bottom: 1px solid $breeze;
+        }
+    }
+    &__map-wrapper {
+        height: 457px;
+        width: auto;
+        margin-bottom: 38px;
+        background: url("../img/map-mobile@1x.jpg") no-repeat center center;
+    }
+    &__map {
+        width: 100%;
+        height: 457px;
+    }
+    &__wright-to-us {
+        box-sizing: border-box;
+        width: 260px;
+        margin: 0 auto;
+    }
 
-.contacts__part {
-    color: $gray-text;
-    padding: $padding-mobile;
-}
+    @media #{$tablet}  {
+        &__wright-to-us {
+            width: 230px;
+        }
 
-.contacts__map__wrapper {
-    width: auto;
-    height: auto;
-}
+        &__map-wrapper {
+            margin-bottom: 56px;
+        }
+        &__title {
+            padding: $padding-other;
+            @include font-set(43px, 81px, $font-bold, $black);
+            background: url("../img/icon-flag.svg") no-repeat 93% 50%;
+            margin-bottom: 30px;
+        }
+        &__part {
+            padding: 0 50px;
+            @include font-set(17px, 30px, $font-reg, $gray-text);
+            align-items: flex-start;
+            &--nowrap {
+                white-space: nowrap;
+                padding: 0 0 0 50px
+            }
+        }
+        &__text-part {
+            margin-left: 25px;
+        }
+        &__text-container {
+            display: flex;
+        }
+    }
+    @media #{$desktop} {
+        padding: 0 50px;
+        display: block;
+        @include clearfix();
 
-.contacts__map {
-    width: 100%;
-    height: 457px;
+        &__title {
+            margin-left: 65px;
+            padding-left: 110px;
+            @include font-set(53px, 81px, $font-bold, $black);
+            background: url("../img/icon-flag.svg") no-repeat 0% 50%;
+            margin-bottom: 30px;
+        }
+        &__map-wrapper {
+            height: 457px;
+            width: 50%;
+            margin-top: -164px;
+            float: right;
+        }
+        &__wright-to-us {
+            float: left;
+            width: 230px;
+            margin-left: 175px;
+            margin-top: 40px;
+        }
+        &__part {
+            display: flex;
+            @include font-set(17px, 30px, $font-reg, $gray-text);
+            padding-left: 175px;
+            &--nowrap {
+                white-space: nowrap;
+                padding-left: 175px
+            }
+        }
+
+        &__text-container {
+            width: 50%;
+            float: left;
+
+        }
+
+    }
+
+
 }

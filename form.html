@@ -33,75 +33,90 @@
             </p>
             <fieldset class="make-order__form-part">
                 <legend class="make-order__form-caption">ТИП</legend>
-                <div class="make-order__form-container">
-                    <input type="radio" id="accesorise" name="type-choice" class="make-order__radio" checked value="accesorise">
-                    <label for="accesorise" class="make-order__radio-label">Аксессуар для интерьера</label>
-                </div>
-                <div class="make-order__form-container">
-                    <input type="radio" id="toy" name="type-choice" class="make-order__radio" value="toy">
-                    <label for="toy" class="make-order__radio-label">Детская игрушка</label>
+                <div class="make-order__block">
+                    <div class="make-order__form-container">
+                        <input type="radio" id="accesorise" name="type-choice" class="make-order__radio" checked value="accesorise">
+                        <label for="accesorise" class="make-order__radio-label">Аксессуар для интерьера</label>
+                    </div>
+                    <div class="make-order__form-container make-order__form-container--last">
+                        <input type="radio" id="toy" name="type-choice" class="make-order__radio" value="toy">
+                        <label for="toy" class="make-order__radio-label">Детская игрушка</label>
+                    </div>
                 </div>
             </fieldset>
-            <fieldset class="make-order__form-part">
+            <fieldset class="make-order__form-part make-order__form-part--grey">
                 <legend class="make-order__form-caption">Цвет</legend>
-                <div class="make-order__form-container">
+                <div class="make-order__block make-order__block--colors ">
+                <div class="make-order__form-container make-order__form-container--color">
                     <input type="checkbox" id="white" name="color1" class="make-order__check" checked value="c1">
                     <label for="white" class="make-order__check-label">Белый</label>
                 </div>
-                <div class="make-order__form-container">
+                <div class="make-order__form-container make-order__form-container--color">
                     <input type="checkbox" id="grey" name="color2" class="make-order__check" checked value="c2">
                     <label for="grey" class="make-order__check-label">Серый</label>
                 </div>
-                <div class="make-order__form-container">
+                <div class="make-order__form-container make-order__form-container--color">
                     <input type="checkbox" id="tiffany" name="color3" class="make-order__check" value="c3">
                     <label for="tiffany" class="make-order__check-label">"Тиффани"</label>
                 </div>
-                <div class="make-order__form-container">
+                <div class="make-order__form-container make-order__form-container--color">
                     <input type="checkbox" id="black" name="color4" class="make-order__check" value="c4">
                     <label for="black" class="make-order__check-label">Черный</label>
                 </div>
-                <div class="make-order__form-container">
+                <div class="make-order__form-container make-order__form-container--color">
                     <input type="checkbox" id="pink" name="color5" class="make-order__check" value="c5">
                     <label for="pink" class="make-order__check-label">Розовый</label>
                 </div>
-                <div class="make-order__form-container">
+                <div class="make-order__form-container make-order__form-container--color make-order__form-container--last">
                     <input type="checkbox" id="orange" name="color6" class="make-order__check" value="c6">
                     <label for="orange" class="make-order__check-label">Оранжевый</label>
                 </div>
+            </div>
             </fieldset>
             <fieldset class="make-order__form-part">
                 <legend class="make-order__form-caption">ФИО</legend>
-                <div class="make-order__form-container">
-                    <label for="user-name" class="make-order__name-label">Имя:</label>
-                    <input type="text" placeholder="Введите ваше имя" id="user-name" name="name" class="make-order__name">
-                </div>
-                <div class="make-order__form-container">
-                    <label for="surname" class="make-order__name-label">Фамилия:</label>
-                    <input type="text" placeholder="Укажите фамилию" id="surname" name="surname" class="make-order__name">
-                </div>
-                <div class="make-order__form-container">
-                    <label for="patronymic" class="make-order__name-label">Отчество:</label>
-                    <input type="text" placeholder="Отчество, если желаете" id="patronymic" name="patronymic" class="make-order__name">
+                <div class="make-order__block">
+                    <div class="make-order__form-container make-order__form-container--fio">
+                        <label for="user-name" class="make-order__name-label">Имя:</label>
+                        <input type="text" placeholder="Введите ваше имя" id="user-name" name="name" class="make-order__name make-order__name--first ">
+                    </div>
+                    <div class="make-order__form-container make-order__form-container--fio">
+                        <label for="surname" class="make-order__name-label">Фамилия:</label>
+                        <input type="text" placeholder="Укажите фамилию" id="surname" name="surname" class="make-order__name">
+                    </div>
+                    <div class="make-order__form-container  make-order__form-container--fio make-order__form-container--last">
+                        <label for="patronymic" class="make-order__name-label">Отчество:</label>
+                        <input type="text" placeholder="Отчество, если желаете" id="patronymic" name="patronymic" class="make-order__name">
+                    </div>
                 </div>
             </fieldset>
-            <fieldset class="make-order__form-part">
+            <fieldset class="make-order__form-part make-order__form-part--tel">
                 <legend class="make-order__form-caption">Тел</legend>
-                <input type="tel" placeholder="+7 ХХХ ХХ ХХ" class="make-order__tel" name="tel">
+                <div class="make-order__block">
+                    <input type="tel" placeholder="+7 ХХХ ХХ ХХ" class="make-order__tel" name="tel">
+                </div>
             </fieldset>
-            <fieldset class="make-order__form-part">
+            <fieldset class="make-order__form-part make-order__form-part--email">
                 <legend class="make-order__form-caption">E-MAIL</legend>
-                <input type="email" placeholder="Ваш Email" class="make-order__email" name="email">
+                <div class="make-order__block">
+                    <input type="email" placeholder="Ваш Email" class="make-order__email" name="email">
+                </div>
             </fieldset>
             <fieldset class="make-order__form-part">
                 <legend class="make-order__form-caption">Доп</legend>
-                <textarea name="name" rows="8" cols="40" name="add" class="make-order__add">Опишите все ваши пожелания к заказу</textarea>
+                <div class="make-order__block">
+                    <textarea name="name"  name="add" class="make-order__add" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                </div>
             </fieldset>
             <p class="make-order__required">Все поля обязательны для заполнения</p>
-            <button type="submit" name="button" class="btn">ОТПРАВИТЬ ЗАКАЗ</button>
+            <div class="make-order__send-order">
+                <button type="submit" name="button" class="btn">ОТПРАВИТЬ ЗАКАЗ</button>
+            </div>
         </form>
     </main>
     <footer class="page-footer">
         <div class="page-footer__wrapper">
+            <img src="img/logo-mobile.svg" width="102" height="34" alt="Логотип Мишка" class="page-footer__logo">
             <section class="social">
                 <a href="https://www.instagram.com/" class="social__link social__link--inst">instagram</a>
                 <a href="https://www.facebook.com/" class="social__link social__link--face">facebook</a>

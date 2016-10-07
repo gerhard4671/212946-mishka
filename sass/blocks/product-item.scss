@@ -1,15 +1,148 @@
+
 .product-item {
     padding: $padding-mobile;
-}
+    margin-bottom: 30px;
 
-.product-item__title {
-    @include font-set(17px, 24px, $font-bold, $black);
-}
+    &__image-block {
+        height: 195px;
+        width: 260px;
+            &--block1 {
+                background: url("../img/photo-1-mobile@1x.jpg") no-repeat;
+            }
 
-.product-item__features {
-    @include font-set(13px, 30px, $font-reg, $gray-text);
-}
+            &--block2 {
+                background: url("../img/photo-2-mobile@1x.jpg") no-repeat;
+            }
 
-.product-item__price {
-    @include font-set(15px, 24px, $font-bold, $black);
+            &--block3 {
+                background: url("../img/photo-3-mobile@1x.jpg") no-repeat;
+            }
+    }
+
+    &__title {
+        @include font-set(17px, 24px, $font-bold, $black);
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    &__features {
+        @include font-set(13px, 30px, $font-reg, $gray-text);
+        margin: 0;
+    }
+
+    &__price {
+        @include font-set(15px, 24px, $font-bold, $black);
+        margin: 0;
+    }
+    &__description-container {
+        border: 1px solid $bg-light-grey;
+        border-top: none;
+        padding: 30px;
+    }
+    &__buy-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 25px;
+        padding-top: 20px;
+        border-top: 1px solid $bg-light-grey;
+    }
+
+    &__add-to-cart {
+        display: block;
+        font-size: 0;
+        height: 21px;
+        width: 19px;
+        background: url("../img/icon-cart.svg") no-repeat;
+    }
+
+    @media #{$tablet} {
+        display: flex;
+        padding: 0 50px;
+        margin-bottom: 56px;
+
+        &__image-block {
+            height: 334px;
+            width: 50%;
+                &--block1 {
+                    background: url("../img/photo-1-tablet@1x.jpg") no-repeat;
+                }
+
+                &--block2 {
+                    background: url("../img/photo-2-tablet@1x.jpg") no-repeat;
+                }
+
+                &--block3 {
+                    background: url("../img/photo-3-tablet@1x.jpg") no-repeat;
+                }
+        }
+
+        &__description-container {
+            width: 50%;
+            border-top: 1px solid $bg-light-grey;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &__features {
+            @include font-set(15px, 30px, $font-reg, $gray-text);
+        }
+
+        &__title {
+            font-size: 20px;
+        }
+
+        &__price {
+            @include font-set(17px, 24px, $font-bold, $black);
+        }
+    }
+
+    @media #{$desktop} {
+        padding: 0px;
+        max-width: 316px;
+        margin-bottom: 56px;
+
+        &__image-block {
+            height: 462px;
+            width: 316px;
+
+            &--block1 {
+                background: url("../img/photo-1-desktop@1x.jpg") no-repeat;
+            }
+
+            &--block2 {
+                background: url("../img/photo-2-desktop@1x.jpg") no-repeat;
+            }
+
+            &--block3 {
+                background: url("../img/photo-3-desktop@1x.jpg") no-repeat;
+            }
+        }
+
+        &__price {
+            @include font-set(17px, 24px, $font-bold, $black);
+        }
+
+        &__features {
+            @include font-set(15px, 30px, $font-reg, $gray-text);
+        }
+
+        &__title {
+            font-size: 20px;
+        }
+
+        &__description-container {
+            min-height: 135px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &__buy-section {
+            margin-top: 0;
+        }
+
+    }
+
+
 }

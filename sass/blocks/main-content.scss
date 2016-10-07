@@ -1,5 +1,16 @@
 .main-content__page-title {
     background-color: $bg-grey;
     @include font-set(27px, 30px, $font-bold, $black);
-    padding: $padding-mobile;
+    padding:74px 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.product {
+    @media #{$desktop} {
+        display: flex;
+        padding: 0 50px;
+        justify-content: space-between;
+    }
 }

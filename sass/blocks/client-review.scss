@@ -1,20 +1,142 @@
 .client-review {
     padding: $padding-mobile;
-}
+    margin-bottom: 30px;
+    &__title {
+        @include font-set(25px, 30px,  $font-bold, $black);
+    }
+    &__text {
+        color: $gray-text;
+        margin: 0;
+        margin-bottom: 22px;
+    }
+    &__name {
+        @include font-set(18px, 24px,  $font-bold, $black);
+        margin: 0;
+    }
+    &__user-link {
+        @include font-set(18px, 30px,  $font-reg, $gray-text);
+        margin: 0;
+        margin-bottom: 33px;
+    }
+    &__btn-container {
+        display: flex;
+        margin-bottom: 38px;
+    }
+    &__btn {
+        box-sizing: border-box;
+        width: 130px;
+        min-height: 50px;
+        border:1px solid #ececec;
+        background:none;
+        font-size: 0;
+        display: block;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+        &--prev {
+            background: url("../img/icon-left-arrow.svg") no-repeat 50% 50%;
+        }
+        &--next {
+            background: url("../img/icon-right-arrow.svg") no-repeat 50% 50%;
+            margin-left: -1px;
+        }
+    }
+    &__wright-to-us {
+        max-width: 260px;
+    }
 
-.client-review__title {
-    @include font-set(25px, 30px,  $font-bold, $black);
-}
+    @media #{$tablet} {
+        background: url("../img/lace.jpg") no-repeat;
+        margin-top: 50px;
+        padding: 80px 50px 50px 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
-.client-review__text {
-    color: $gray-text;
-    margin: 0;
-}
 
-.client-review__name {
-    @include font-set(18px, 24px,  $font-bold, $black);
-}
+        &__title {
+            @include font-set(43px, 50px,  $font-bold, $black);
+            width: 300px;
+            margin: 0;
+            order: 1;
 
-.client-review__user-link {
-    @include font-set(18px, 30px,  $font-reg, $gray-text);
+        }
+        &__wright-to-us {
+            width: 175px;
+            order: 2;
+        }
+
+        &__text {
+            width: 100%;
+            order: 3;
+            margin-top: 50px;
+            margin-bottom: 65px;
+            @include font-set(17px, 30px,  $font-reg, $gray-text);
+        }
+
+        &__container {
+            order: 4;
+        }
+
+        &__btn-container {
+            order: 5;
+        }
+
+        &__btn {
+            border: none;
+            width: 85px;
+        }
+    }
+
+    @media #{$desktop} {
+        background: url("../img/lace.jpg") no-repeat;
+        height: 457px;
+        margin: 50px;
+        padding: 70px 50px 0 175px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+
+        &__title {
+            @include font-set(53px, 57px,  $font-bold, $black);
+            width: 300px;
+            margin: 0;
+            order: 1;
+            height: 57px;
+
+        }
+        &__wright-to-us {
+            width: 175px;
+            height: 57px;
+            order: 2;
+        }
+
+        &__text {
+            width: 100%;
+            order: 3;
+            margin-top: -62px;
+
+            @include font-set(17px, 30px,  $font-reg, $gray-text);
+        }
+
+        &__container {
+            order: 4;
+            margin-top: -90px;
+        }
+
+        &__btn-container {
+            order: 5;
+        }
+
+        &__btn {
+            border: none;
+            width: 85px;
+            margin-top: -232px;
+        }
+    }
+
 }

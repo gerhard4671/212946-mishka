@@ -1,5 +1,11 @@
 .features-table {
     color: $gray-text;
-    margin: 0 auto;
     min-width: 260px;
+    border-collapse: collapse;
+    &__row {
+        border-bottom: 1px solid #ececec;
+    }
+    &__data {
+        padding-bottom: 5px;
+    }
 }

@@ -1,29 +1,76 @@
 .about-us {
     padding: $padding-mobile;
-}
+    &__features-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+    &__title {
+        @include font-set(25px, 30px, $font-bold, $black);
+        margin-bottom: 54px;
+    }
+    &__feature-item {
+        @include font-set(17px, 17px, $font-bold, $black);
+        display: block;
+        margin-bottom: 30px;
+    }
+    &__feature-item::before {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 37px;
+        margin-bottom: 25px;
+    }
+    @media #{$tablet} {
+        padding: 0 50px;
+        &__title {
+            @include font-set(43px, 50px, $font-bold, $black);
+            margin-bottom: 54px;
+        }
 
-.about-us__features-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+        &__features-list {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+        }
 
-.about-us__title {
-    @include font-set(25px, 30px, $font-bold, $black);
-    margin-bottom: 54px;
-}
+        &__feature-item {
+            @include font-set(20px, 20px, $font-bold, $black);
+            max-width: 300px;
+        }
+    }
 
-.about-us__feature-item {
-    position: relative;
-    margin-bottom: 54px;
-    @include font-set(17px, 17px, $font-bold, $black);
-}
+    @media #{$desktop} {
+        padding: 0 50px;
+        margin-left: 175px;
+        &__title {
+            @include font-set(53px, 57px, $font-bold, $black);
+            margin-bottom: 54px;
+        }
 
-.about-us__feature-item::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 60px;
-    height: 50px;
-    top: -47px;
+        &__features-list {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+            width: 660px;
+        }
+
+        &__feature-item {
+            @include font-set(20px, 20px, $font-bold, $black);
+            max-width: 300px;
+        }
+    }
+
 }

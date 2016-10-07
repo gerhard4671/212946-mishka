@@ -1,10 +1,140 @@
+
 .production-process {
     padding: $padding-mobile;
-}
-.production-process__title {
-    @include font-set(17px, 24px, $font-bold, $black);
-}
+    margin-bottom: 58px;
 
-.production-process__promo {
-    @include font-set(13px, 24px, $font-reg, $gray-text);
+    &__title-container {
+        padding: 25px 0 25px 30px;
+        border: 1px solid $bg-light-grey;
+        border-bottom: none;
+    }
+    &__title {
+        @include font-set(17px, 24px, $font-bold, $black);
+        margin: 0;
+        display: flex;
+    }
+
+    &__title::before {
+        content: "";
+        display: block;
+        width: 52px;
+        height: 48px;
+        margin-right: 30px;
+        background: url("../img/icon-video.svg") no-repeat center center;
+    }
+
+    &__promo {
+        @include font-set(13px, 24px, $font-reg, $gray-text);
+        margin: 0;
+        margin-bottom: 32px;
+    }
+
+
+    &__video-block {
+        background: url("../img/video-mobile@1x.jpg") no-repeat;
+        width: 260px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__video-play {
+        width: 101px;
+        height: 77px;
+        background: url("../img/icon-play.svg") no-repeat;
+        font-size: 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__info {
+        padding: 32px;
+        border: 1px solid $bg-light-grey;
+        border-top: none;
+    }
+
+
+    @media #{$tablet} {
+        padding: 0 50px;
+        margin-bottom: 63px;
+        display: flex;
+        flex-direction: column;
+
+            &__title-container{
+                order: 2;
+            }
+
+            &__title {
+                font-size: 20px;
+            }
+
+            &__title::before {
+                height: 24px;
+            }
+
+            &__video-block {
+                width: 668px;
+                height: 455px;
+                background: url("../img/video-tablet@1x.jpg") no-repeat;
+                order: 1;
+            }
+
+            &__info {
+                padding: 15px 40px 45px 40px;
+                order: 3;
+            }
+
+            &__promo {
+                @include font-set(15px, 30px, $font-reg, $gray-text);
+            }
+        }
+
+    @media #{$desktop} {
+        padding: 0 50px;
+        @include clearfix()
+
+
+        &__video-block {
+            width: 682px;
+            height: 455px;
+            background: url("../img/video-desktop@1x.jpg") no-repeat;
+            float:left;
+        }
+
+        &__title::before {
+            height: 22px;
+            width: 32px;
+            margin-bottom: 30px;
+        }
+
+
+        &__title-container{
+            box-sizing:border-box;
+            float: right;
+            border-left: none;
+            width: 368px;
+            padding: 0 82px;
+            padding-top: 47px;
+        }
+
+        &__title {
+            display: block;
+            font-size: 20px;
+        }
+
+        &__promo {
+            @include font-set(15px, 30px, $font-reg, $gray-text);
+        }
+
+        &__info {
+            float: right;
+            box-sizing: border-box;
+            border-left: none;
+            width: 368px;
+            padding: 42px 60px 60px 80px;
+        }
+
+
+    }
 }

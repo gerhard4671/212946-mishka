@@ -1,12 +1,13 @@
 .social {
     display: flex;
+    width: 100%;
     justify-content: center;
-
+    padding: 25px 0;
+    border-bottom: 1px solid $dark-grey;
 }
 
 .social__link {
     font-size: 0;
-    align-items: center;
     width: 25px;
     height: 29px;
     margin-right: 40px;
@@ -23,4 +24,19 @@
 .social__link--twit {
     background: url("../img/icon-twitter.svg") no-repeat 0 100%;
     margin-right: 0;
+}
+
+
+@media #{$tablet} {
+    .social  {
+        border: none;
+        padding: 0;
+    }
+}
+
+@media #{$desktop} {
+    .social  {
+        border: none;
+        padding: 0;
+    }
 }
