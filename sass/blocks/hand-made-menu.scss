@@ -12,6 +12,14 @@
     &__menu-container {
         margin-top: 120px;
     }
+    &__delivery {
+        text-align: right;
+        @include font-set(15px, 24px, $font-reg, $gray-text);
+        display: none;
+    }
+    &__offers-list {
+        display: none;
+    }
     &__block {
         padding: $padding-mobile;
         min-height: 103px;
@@ -50,6 +58,7 @@
     @media #{$tablet} {
         background:  url("../img/hero-tablet@1x.jpg") no-repeat 50% 0;
         padding: 0 50px;
+        margin-top: -44px;
         &__title {
             @include font-set(43px, 50px, $font-bold, $black);
             padding-top: 155px;
@@ -63,12 +72,23 @@
         &__block {
             width: 50%;
         }
+        &__delivery {
+            text-align: right;
+            @include font-set(15px, 24px, $font-reg, $gray-text);
+            display: block;
+            margin: 0;
+            margin-top: 20px;
+        }
+        &__offers-list {
+            display: none;
+        }
     }
 
     @media #{$desktop} {
         background:  url("../img/hero-desktop@1x.jpg") no-repeat 50% 0;
         padding: 0 50px;
         margin-bottom: 130px;
+        @include clearfix();
         &__title {
             @include font-set(53px, 57px, $font-bold, $black);
             padding-top: 155px;
@@ -81,6 +101,27 @@
         }
         &__block {
             width: 50%;
+        }
+        &__delivery {
+            text-align: right;
+            @include font-set(15px, 24px, $font-reg, $gray-text);
+            display: block;
+            margin: 0;
+            margin-top: 20px;
+            float: right;
+        }
+        &__offers-list {
+            display: block;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 20px;
+            float: left;
+        }
+        &__offer {
+            @include font-set(15px, 24px, $font-bold, $black);
+            display: inline-block;
+            margin-right: 50px;
         }
 
     }

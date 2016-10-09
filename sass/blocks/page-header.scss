@@ -1,24 +1,74 @@
 .page-header {
-    padding: 20px 30px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
+    @include clearfix();
+    padding-top: 22px;
+    padding-bottom: 22px;
     &__nav-toggle {
+        background: url("../img/icon-menu-open.svg") no-repeat 50% 50%;
         border: none;
+        font-size: 0;
         display: block;
         width: 20px;
-        height: 20px;
-        background: $white url("../img/icon-menu-open.svg") no-repeat 50% 50%;
-        font-size: 0;
+        height: 35px;
+        float: right;
+        margin-right: 30px;
         cursor: pointer;
         &:focus {
             outline: none;
         }
+        &--cross {
+            background: url("../img/icon-menu-close.svg") no-repeat 50% 50%;
+            border: none;
+            font-size: 0;
+            display: block;
+            width: 20px;
+            height: 35px;
+            float: right;
+            margin-right: 30px;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+            }
+        }
     }
 
     &__logo {
-        margin-right: 70px;
+        float: left;
+        margin-left: 115px;
+        height: 35px;
     }
+
+    @media #{$tablet} {
+        padding: 0;
+        padding-left: 50px;
+
+        &__logo {
+        display: inline-block;
+        width: 90px;
+        margin-left: 0px;
+        height: 35px;
+        padding-top: 28px;
+       }
+       &__nav-toggle {
+           display: none;
+       }
+   }
+
+   @media #{$desktop} {
+       padding: 0 50px;
+       display: flex;
+
+       &__logo {
+       display: inline-flex;
+       text-align: center;
+       float: none;
+       order: 2;
+       margin-left: -580px;
+       padding-top: 28px;
+
+      }
+      &__nav-toggle {
+          display: none;
+      }
+  }
 
 }

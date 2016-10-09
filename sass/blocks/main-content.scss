@@ -1,10 +1,85 @@
-.main-content__page-title {
-    background-color: $bg-grey;
-    @include font-set(27px, 30px, $font-bold, $black);
-    padding:74px 30px;
-    text-align: center;
-    margin-bottom: 30px;
+.main-content {
+    &__page-title {
+        @include font-set(27px, 30px, $font-bold, $black);
+        margin: 0;
+    }
+    &__title-container {
+        background-color: $bg-grey;
+        padding:74px 30px;
+        text-align: center;
+        margin-bottom: 30px;
+        border-top: 1px solid #ececec;
+    }
+    &__delivery {
+        text-align: right;
+        @include font-set(15px, 24px, $font-reg, $gray-text);
+        display: none;
+    }
+    &__offers-list {
+        display: none;
+    }
+
+    @media #{$tablet} {
+
+        &__page-title {
+            @include font-set(43px, 50px, $font-bold, $black);
+            padding-top: 50px;
+            padding-bottom: 78px;
+        }
+        &__title-container {
+            padding: 0;
+            margin-top: -44px;
+        }
+        &__delivery {
+            text-align: right;
+            @include font-set(15px, 24px, $font-reg, $gray-text);
+            display: block;
+            margin: 0;
+            margin-top: 20px;
+            padding-right: 50px;
+        }
+        &__offers-list {
+            display: none;
+        }
+    }
+
+    @media #{$desktop} {
+
+        &__page-title {
+            @include font-set(43px, 50px, $font-bold, $black);
+            padding-top: 92px;
+            padding-bottom: 78px;
+        }
+        &__title-container {
+            padding: 0 50px;
+
+        }
+        &__delivery {
+            text-align: right;
+            @include font-set(15px, 24px, $font-reg, $gray-text);
+            display: block;
+            margin: 0;
+            margin-top: 20px;
+            float: right;
+        }
+        &__offers-list {
+            display: block;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 20px;
+            float: left;
+        }
+        &__offer {
+            @include font-set(15px, 24px, $font-bold, $black);
+            display: inline-block;
+            margin-right: 50px;
+        }
+
+    }
 }
+
+
 
 
 .product {

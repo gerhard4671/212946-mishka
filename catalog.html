@@ -9,25 +9,35 @@
 
 <body>
     <header class="page-header">
-        <div class="page-header__logo">
-            <img src="img/logo-mobile.svg"  alt="Логотип Мишка">
-        </div>
-        <nav class="main-nav main-nav--closed">
-            <button class="main-nav__toggle" type="button">Показать меню</button>
-            <div class="main-nav__wrapper">
-                <ul class="main-nav__list">
-                    <li class="main-nav__item"><a href="#">Каталог товаров</a></li>
-                    <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
-                    <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
-                    <li class="main-nav__item"><a href="#">Корзина:Пока пуста</a></li>
-                </ul>
+            <div class="page-header__logo">
+                <img src="img/logo-mobile.svg"  alt="Логотип Мишка">
             </div>
-        </nav>
-
+            <button class="page-header__nav-toggle" type="button">Переключатель меню</button>
+            <nav class="main-nav main-nav--closed">
+                <div class="main-nav__wrapper">
+                    <ul class="main-nav__list">
+                        <div class="main-nav__items-list main-nav__items-list--first ">
+                            <li class="main-nav__item"><a class="main-nav__item-link main-nav__item-link--catalog" href="#">Каталог товаров</a></li>
+                            <li class="main-nav__item"><a class="main-nav__item-link main-nav__item-link--bind-order" href="#">Вязание на заказ</a></li>
+                        </div>
+                        <div class="main-nav__items-list main-nav__items-list--second">
+                            <li class="main-nav__item"><a class="main-nav__item-link main-nav__item-link--search" href="#">Поиск по сайту</a></li>
+                            <li class="main-nav__item"><a class="main-nav__item-link main-nav__item-link--cart" href="#">Корзина: пока пуста</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
     </header>
 
     <main class="main-content">
-        <h1 class="main-content__page-title">Каталог товаров</h1>
+        <div class="main-content__title-container">
+            <ul class="main-content__offers-list">
+                <li class="main-content__offer">Новые поступления</li>
+                <li class="main-content__offer">Распродажа</li>
+            </ul>
+            <p class="main-content__delivery">Бесплатная доставка по России</p>
+            <h1 class="main-content__page-title">Каталог товаров</h1>
+        </div>
         <section class="product">
             <article class="product-item">
                 <div class="product-item__image-block product-item__image-block--block1">
@@ -120,7 +130,7 @@
             <a href="#" class="btn btn--pop-up">Добавить</a>
         </div>
     </section>
-
+    <script src="js/main.js"></script>
 </body>
 
 </html>
